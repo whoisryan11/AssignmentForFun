@@ -64,6 +64,16 @@ public class MapPracticeTests {
         // Then
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void findValueOfTest4(){
+        // Given
+        String key = "Jigglypuff";
+        // When
+        String expected = "Pokemon";
+        String actual = (String) mapPractice.findValueOf(map1, key);
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void findKeysOfTest1(){
@@ -93,6 +103,17 @@ public class MapPracticeTests {
         String value = "Pokemon";
         // When
         Object[] expected = {"Jigglypuff", "Pikachu"};
+        Object[] actual = mapPractice.findKeysOf(map1, value);
+        // Then
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void findKeysOfTest4(){
+        // Given
+        String value = "De";
+        // When
+        Object[] expected = {};
         Object[] actual = mapPractice.findKeysOf(map1, value);
         // Then
         Assert.assertArrayEquals(expected, actual);
